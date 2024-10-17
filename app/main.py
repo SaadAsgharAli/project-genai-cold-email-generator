@@ -6,6 +6,19 @@ from portfolio import Portfolio
 from utils import clean_text
 
 
+# Custom CSS to add a gradient background
+gradient_background = """
+<style>
+ .stApp {
+    background: linear-gradient(to right, #4A90E2, #9013FE);  /* Blue to Purple */
+}
+</style>
+"""
+
+st.markdown(gradient_background, unsafe_allow_html=True)
+
+
+
 def create_streamlit_app(llm, portfolio, clean_text):
     st.title("📧 Cold Mail Generator")
     url_input = st.text_input("Enter a URL:", value="https://jobs.nike.com/job/R-38652")
