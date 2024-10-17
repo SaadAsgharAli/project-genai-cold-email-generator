@@ -30,7 +30,8 @@ def create_streamlit_app(llm, portfolio, clean_text):
 if __name__ == "__main__":
     chain = Chain()
     portfolio = Portfolio()
- 
+    st.set_page_config(layout="wide", page_title="Cold Email Generator", page_icon="📧")
+    
     # Custom CSS to add a gradient background
     gradient_background = """
     <style>
@@ -41,7 +42,6 @@ if __name__ == "__main__":
     """
     st.markdown(gradient_background, unsafe_allow_html=True)
 
-    st.set_page_config(layout="wide", page_title="Cold Email Generator", page_icon="📧")
     create_streamlit_app(chain, portfolio, clean_text)
 
 
